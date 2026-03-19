@@ -4,8 +4,8 @@ set -e
 echo "🚀 Starting Django Monitoring deploy..."
 
 # 1. Update system packages
-echo "Обновление системы..."
-sudo apt-get update -y
+echo "Обновление системы (ожидание dpkg lock)..."
+sudo apt-get update -y -o DPkg::Lock::Timeout=120
 
 # 2. Install Docker if not present
 if ! command -v docker &> /dev/null
