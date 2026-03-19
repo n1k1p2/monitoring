@@ -17,9 +17,7 @@ try:
     
     commands = [
         "git --version || (apt-get update -y -o DPkg::Lock::Timeout=120 && apt-get install -y -o DPkg::Lock::Timeout=120 git)",
-        "rm -rf monitoring",
-        "git clone https://github.com/n1k1p2/monitoring.git",
-        "cd monitoring && chmod +x deploy.sh && ./deploy.sh"
+        "cd monitoring && git fetch --all && git reset --hard origin/main && git pull && chmod +x deploy.sh && ./deploy.sh"
     ]
     
     for cmd in commands:
