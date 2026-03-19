@@ -72,7 +72,7 @@ def update_telegram_dashboard():
     bali_time = now.astimezone(ZoneInfo("Asia/Makassar")).strftime('%H:%M:%S')
     jkt_time = now.astimezone(ZoneInfo("Asia/Jakarta")).strftime('%H:%M:%S')
     
-    lines.append(f"⏱ <i>Обновлено: {msk_time} (МСК) | {bali_time} (Бали) ")
+    lines.append(f"⏱ <i>Обновлено: {msk_time} (МСК) | {bali_time} (Бали) | {jkt_time} (Джакарта)</i>")
     text = "\n".join(lines)
     
     bot_token = settings.telegram_bot_token
