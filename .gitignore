@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+db.sqlite3
+*.sqlite3
+
+# Env
+.env
+venv/
+env/
+.venv/
+
+# IDEs
+.idea/
+.vscode/
+
+# Local testing scripts
+test.txt
+test_tg.py
+dump_openrouter.py
